@@ -68,7 +68,10 @@ const TestimonialSection: React.FC = () => {
   const [activeTab, setActiveTab] = useState<"written" | "video">("written");
 
   return (
-    <section className="flex overflow-hidden flex-col justify-center p-32 bg-white max-md:px-5 max-md:py-24">
+    <section
+      id="testimonial "
+      className="flex overflow-hidden flex-col justify-center p-32 bg-white max-md:px-5 max-md:py-24"
+    >
       <div className="flex flex-col justify-center w-full max-md:max-w-full">
         <header className="flex flex-wrap gap-10 justify-between items-center w-full max-md:max-w-full">
           <h2 className="font-gilroy self-stretch my-auto text-4xl font-bold leading-tight text-center text-black">

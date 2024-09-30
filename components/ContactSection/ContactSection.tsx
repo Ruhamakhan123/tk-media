@@ -6,6 +6,7 @@ import backgroundSvg from "@/public/bg.svg"; // Adjust the path if needed
 const ContactSection: React.FC = () => {
   return (
     <section
+      id="contact"
       className="flex flex-col justify-center items-center p-32 mt-56 w-full bg-cyan-500 max-md:px-5 max-md:py-24 max-md:mt-10"
       style={{
         backgroundImage: `url(${backgroundSvg.src})`, // Ensure to use .src for StaticImageData

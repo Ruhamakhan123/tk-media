@@ -28,7 +28,10 @@ const projects: Project[] = [
 
 const PortfolioSection: React.FC = () => {
   return (
-    <section className="flex flex-col justify-center items-center p-32 bg-stone-50 max-md:px-5 max-md:py-24">
+    <section
+      id="portfolio"
+      className="flex flex-col justify-center items-center p-32 bg-stone-50 max-md:px-5 max-md:py-24"
+    >
       <div className="flex flex-col w-full text-black max-md:max-w-full max-md:items-center max-md:text-center md:-ml-20">
         <header className="flex flex-wrap gap-10 justify-between items-center w-full max-md:flex-col max-md:text-center max-md:gap-4">
           <h2 className=" font-gilroy self-stretch my-auto text-4xl font-bold leading-10 w-[435px] max-md:w-full">

@@ -25,7 +25,7 @@ const InfluencerCarousel: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col w-full">
+    <div id="influencer" className="flex flex-col w-full">
       <div className="flex overflow-hidden flex-col justify-center items-center p-32 bg-black max-md:px-5 max-md:py-24">
         <CarouselHeader />
         <div className="relative flex w-full mt-12 max-md:mt-10">

@@ -10,7 +10,6 @@ import {
   SheetContent,
   SheetHeader,
   SheetTitle,
-  SheetDescription,
 } from "@/components/ui/sheet";
 
 import { FiMenu } from "react-icons/fi"; // Importing the hamburger menu icon
@@ -29,6 +28,18 @@ function Navbar({ className }: { className?: string }) {
   const [searchOpen, setSearchOpen] = useState(false);
 
   const isActive = (path: string) => pathname === path;
+
+  // Scroll handler for smooth scrolling
+  const handleScroll = (
+    e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
+    id: string
+  ) => {
+    e.preventDefault();
+    const targetElement = document.getElementById(id);
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <div className={cn("fixed top-0 inset-x-0 z-50", className)}>
@@ -64,6 +75,7 @@ function Navbar({ className }: { className?: string }) {
             <div className="flex flex-col items-start text-white text-sm md:text-md mt-4 md:mt-0">
               <Link
                 href="/"
+                onClick={(e) => handleScroll(e, "home")}
                 className={cn(
                   "px-3 py-2 rounded-lg w-full text-left transition",
                   isActive("/") ? "bg-gray-600" : "hover:bg-gray-700"
@@ -72,7 +84,8 @@ function Navbar({ className }: { className?: string }) {
                 Home
               </Link>
               <Link
-                href="/about-us"
+                href="#about-us"
+                onClick={(e) => handleScroll(e, "about-us")}
                 className={cn(
                   "px-3 py-2 rounded-lg w-full text-left transition",
                   isActive("/about-us") ? "bg-teal-500" : "hover:bg-gray-700"
@@ -81,7 +94,8 @@ function Navbar({ className }: { className?: string }) {
                 About Us
               </Link>
               <Link
-                href="/portfolio"
+                href="#portfolio"
+                onClick={(e) => handleScroll(e, "portfolio")}
                 className={cn(
                   "px-3 py-2 rounded-lg w-full text-left transition",
                   isActive("/portfolio") ? "bg-teal-500" : "hover:bg-gray-700"
@@ -92,46 +106,21 @@ function Navbar({ className }: { className?: string }) {
 
               {/* Services dropdown */}
               <div className="relative w-full">
-                <p
-                  onMouseEnter={() => setActive("Services")}
-                  onMouseLeave={() => setActive(null)}
+                <Link
+                  href="#services"
+                  onClick={(e) => handleScroll(e, "services")}
                   className={cn(
                     "px-3 py-2 cursor-pointer flex items-center rounded-lg w-full text-left transition",
                     active === "Services" || isActive("/services")
                       ? "bg-gray-600"
                       : "hover:bg-gray-700"
                   )}
-                  onClick={() =>
-                    setActive(active === "Services" ? null : "Services")
-                  }
                 >
                   Services{" "}
                   <span className="ml-1">
                     <FaAngleDown />
                   </span>
-                </p>
-                {active === "Services" && (
-                  <div className="absolute top-full left-0 mt-2 w-full bg-white text-black rounded-lg shadow-lg">
-                    <Link
-                      href="/web-dev"
-                      className="block px-3 py-2 hover:bg-gray-200 w-full"
-                    >
-                      Web Development
-                    </Link>
-                    <Link
-                      href="/interface-design"
-                      className="block px-3 py-2 hover:bg-gray-200 w-full"
-                    >
-                      Interface Design
-                    </Link>
-                    <Link
-                      href="/seo"
-                      className="block px-3 py-2 hover:bg-gray-200 w-full"
-                    >
-                      SEO
-                    </Link>
-                  </div>
-                )}
+                </Link>
               </div>
 
               {/* Search icon with input */}
@@ -155,7 +144,8 @@ function Navbar({ className }: { className?: string }) {
 
               {/* Contact button */}
               <Link
-                href="/contact"
+                href="#contact"
+                onClick={(e) => handleScroll(e, "contact")}
                 className={cn(
                   "bg-[#00bbd2] text-white px-4 py-2 rounded-lg w-full text-left border-2 border-black hover:bg-teal-600 transition",
                   isActive("/contact") ? "bg-teal-600" : ""
@@ -171,6 +161,7 @@ function Navbar({ className }: { className?: string }) {
         <div className="hidden md:flex space-x-4 items-center">
           <Link
             href="/"
+            onClick={(e) => handleScroll(e, "home")}
             className={cn(
               "px-4 py-2 rounded-full transition",
               isActive("/") ? "bg-gray-600" : "hover:bg-gray-700"
@@ -179,7 +170,8 @@ function Navbar({ className }: { className?: string }) {
             Home
           </Link>
           <Link
-            href="/about-us"
+            href="#about-us"
+            onClick={(e) => handleScroll(e, "about-us")}
             className={cn(
               "px-4 py-2 rounded-full transition",
               isActive("/about-us") ? "bg-teal-500" : "hover:bg-gray-700"
@@ -188,7 +180,8 @@ function Navbar({ className }: { className?: string }) {
             About Us
           </Link>
           <Link
-            href="/portfolio"
+            href="#portfolio"
+            onClick={(e) => handleScroll(e, "portfolio")}
             className={cn(
               "px-4 py-2 rounded-full transition",
               isActive("/portfolio") ? "bg-teal-500" : "hover:bg-gray-700"
@@ -197,41 +190,19 @@ function Navbar({ className }: { className?: string }) {
             Portfolio
           </Link>
           <div className="relative">
-            <p
-              onMouseEnter={() => setActive("Services")}
-              onMouseLeave={() => setActive(null)}
+            <Link
+              href="#services"
+              onClick={(e) => handleScroll(e, "services")}
               className={cn(
                 "px-4 py-2 cursor-pointer flex items-center rounded-full transition",
                 active === "Services" ? "bg-gray-600" : "hover:bg-gray-700"
               )}
-              onClick={() =>
-                setActive(active === "Services" ? null : "Services")
-              }
             >
               Services{" "}
               <span className="ml-1">
                 <FaAngleDown />
               </span>
-            </p>
-            {active === "Services" && (
-              <div className="absolute top-full left-0 mt-2 bg-white text-black rounded-lg shadow-lg">
-                <Link
-                  href="/web-dev"
-                  className="block px-4 py-2 hover:bg-gray-200"
-                >
-                  Web Development
-                </Link>
-                <Link
-                  href="/interface-design"
-                  className="block px-4 py-2 hover:bg-gray-200"
-                >
-                  Interface Design
-                </Link>
-                <Link href="/seo" className="block px-4 py-2 hover:bg-gray-200">
-                  SEO
-                </Link>
-              </div>
-            )}
+            </Link>
           </div>
 
           {/* Search */}
@@ -252,7 +223,8 @@ function Navbar({ className }: { className?: string }) {
 
           {/* Contact button */}
           <Link
-            href="/contact"
+            href="#contact"
+            onClick={(e) => handleScroll(e, "contact")}
             className={cn(
               "bg-[#00bbd2] text-white px-4 py-2 rounded-full border-2 border-black hover:bg-teal-600 transition",
               isActive("/contact") ? "bg-teal-600" : ""

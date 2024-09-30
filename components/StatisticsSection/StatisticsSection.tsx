@@ -12,7 +12,10 @@ const statisticsData = [
 ];
 
 const StatisticsSection: React.FC = () => (
-  <section className="grid grid-cols-2 md:flex mdLflex-wrap gap-10 md:justify-between md:items-center px-32 py-16 text-white bg-black max-md:px-5 mt-10">
+  <section
+    id="stats"
+    className="grid grid-cols-2 md:flex mdLflex-wrap gap-10 md:justify-between md:items-center px-32 py-16 text-white bg-black max-md:px-5 mt-10"
+  >
     {statisticsData.map((item, index) => (
       <StatisticItem key={index} value={item.value} label={item.label} />
     ))}
