@@ -16,11 +16,13 @@ const ContentCreationHouse: React.FC<ContentCreationHouseProps> = ({
   return (
     <main className="flex flex-wrap justify-center text-base">
       <section className="flex flex-col flex-1 shrink justify-center py-32 pr-16 pl-32 basis-0 min-w-[240px] max-md:px-5 max-md:py-24 max-md:max-w-full">
-        <div className="flex flex-col items-start pr-14 w-full rounded-none max-w-[536px] max-md:pr-5 max-md:max-w-full">
+        <div className=" flex flex-col items-start pr-14 w-full rounded-none max-w-[536px] max-md:pr-5 max-md:max-w-full">
           <TrustedBadge influencerCount={influencerCount} />
-          <h1 className="mt-5 text-5xl font-medium text-black leading-[56px] max-md:max-w-full max-md:text-4xl max-md:leading-[52px]">
-            {title}
+          <h1 className="font-gilroy mt-5 text-5xl font-medium text-black leading-[56px] max-md:max-w-full max-md:text-4xl max-md:leading-[52px]">
+            "Welcome to TK media group,{" "}
+            <span className="font-bold">a Content Creation House</span>"
           </h1>
+
           <p className="mt-5 leading-6 text-black">{description}</p>
           <CallToAction />
         </div>

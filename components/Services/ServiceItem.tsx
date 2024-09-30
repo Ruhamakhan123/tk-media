@@ -28,7 +28,7 @@ const ServiceItem: React.FC<ServiceItemProps> = ({
             {/* Render title words with the second word on a new line on small screens only */}
             {titleWords.length > 1 ? (
               <>
-                <span className="block max-md:hidden">
+                <span className=" font-gilroy block max-md:hidden">
                   {titleWords[0]} {titleWords[1]}
                 </span>
                 <span className="hidden max-md:block">

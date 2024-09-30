@@ -1,6 +1,6 @@
 import React from "react";
-import arrowRight from "@/public/icons8-right-arrow-50.png";
-import left from "@/public/icons8-left-arrow-50.png";
+import arrowRight from "@/public/Vector 4.png";
+import left from "@/public/Vector 4 (1).png";
 
 interface CarouselNavButtonProps {
   direction: "left" | "right";

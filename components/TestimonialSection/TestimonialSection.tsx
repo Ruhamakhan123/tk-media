@@ -48,17 +48,17 @@ const writtenTestimonials: TestimonialData[] = [
 
 const videoTestimonials = [
   {
-    videoSrc: "https://youtu.be/gMK95vfvoRE?si=8u7tEjVRQbUfQWaP",
+    videoSrc: "https://www.youtube.com/embed/gMK95vfvoRE",
     name: "Jane Doe",
     company: "Company A",
   },
   {
-    videoSrc: "https://youtu.be/q7hOOBcibFM?si=Sx2K7WioI75E9gIn",
+    videoSrc: "https://www.youtube.com/embed/q7hOOBcibFM",
     name: "John Smith",
     company: "Company B",
   },
   {
-    videoSrc: "https://youtu.be/xDk8BWeADSU?si=7tzcPpP8MHIM227n",
+    videoSrc: "https://www.youtube.com/embed/xDk8BWeADSU",
     name: "Andrew Smith",
     company: "Company C",
   },
@@ -71,7 +71,7 @@ const TestimonialSection: React.FC = () => {
     <section className="flex overflow-hidden flex-col justify-center p-32 bg-white max-md:px-5 max-md:py-24">
       <div className="flex flex-col justify-center w-full max-md:max-w-full">
         <header className="flex flex-wrap gap-10 justify-between items-center w-full max-md:max-w-full">
-          <h2 className="self-stretch my-auto text-4xl font-bold leading-tight text-center text-black">
+          <h2 className="font-gilroy self-stretch my-auto text-4xl font-bold leading-tight text-center text-black">
             Clients love us!
           </h2>
           <nav className="flex gap-8 justify-center items-center self-stretch my-auto text-base font-semibold min-w-[240px]">

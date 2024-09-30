@@ -49,7 +49,7 @@ const services: Service[] = [
 const ServicesSection: React.FC = () => {
   return (
     <section className="flex flex-col justify-center p-32 max-md:px-5 max-md:py-24">
-      <h2 className="text-4xl font-bold leading-tight text-center text-black max-md:max-w-full">
+      <h2 className=" font-gilroy text-4xl font-bold leading-tight text-center text-black max-md:max-w-full">
         We offer top notch services
       </h2>
       <div className="flex flex-col justify-center self-center mt-8 max-w-full w-[1096px]">

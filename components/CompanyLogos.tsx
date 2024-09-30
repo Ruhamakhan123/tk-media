@@ -9,9 +9,9 @@ import f from "@/public/Company logo (4).png";
 
 const CompanyLogos = () => {
   return (
-    <div className="bg-white py-10">
+    <div className="bg-white py-10 mt-16">
       <div className="text-center mb-8">
-        <h3 className="text-xl font-semibold">
+        <h3 className="font-gilroy text-xl font-semibold">
           These brands <span style={{ color: "#00bbd2" }}>trust</span> TK Media
           Group
         </h3>

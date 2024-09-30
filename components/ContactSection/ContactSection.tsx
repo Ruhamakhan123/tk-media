@@ -14,7 +14,7 @@ const ContactSection: React.FC = () => {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <h2 className="text-6xl font-bold leading-none text-center text-white max-md:max-w-full max-md:text-4xl">
+      <h2 className="font-gilroy text-6xl font-bold leading-none text-center text-white max-md:max-w-full max-md:text-4xl">
         Let's get in touch!
       </h2>
       <div className="flex flex-wrap gap-8 justify-center items-start mt-12 max-md:mt-10 max-md:max-w-full">
