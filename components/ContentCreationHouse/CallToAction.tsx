@@ -35,8 +35,8 @@ const CallToAction: React.FC = () => {
         />
       </button>
       <Link
-        href="#testimonial"
-        onClick={(e) => handleScroll(e, "testimonial")}
+        href="#testimonials"
+        onClick={(e) => handleScroll(e, "testimonials")}
         className="gap-2.5 self-stretch px-4 py-2 my-auto text-black border border-black border-solid rounded-[1000px] text-sm md:text-base"
       >
         Reviews

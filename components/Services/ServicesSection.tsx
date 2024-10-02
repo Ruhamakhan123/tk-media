@@ -14,13 +14,13 @@ const services: Service[] = [
     icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/64b936aa6174ad1f0a60fe57c90287e1a05915e277106e78bfe6f00912258d9b?placeholderIfAbsent=true&apiKey=93385a543be74ee9937d50a97d245785",
     title: "Videography",
     description:
-      "Welcome to TK Media Group, your premier partner in the digital world. At TK Media Group, we believe in the power of creativity and strategy to",
+      "We produce captivating videos for corporate and social media purposes. Our videography services cover the entire process, from conceptualization to post-production, delivering compelling content that tells your brand's story.",
   },
   {
     icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/3fb739f9f2402d2b9988d5686a2b58655dc74edd29cb5d06c348adccca5d820e?placeholderIfAbsent=true&apiKey=93385a543be74ee9937d50a97d245785",
     title: "Photography",
     description:
-      "Welcome to TK Media Group, your premier partner in the digital world. At TK Media Group, we believe in the power of creativity and strategy to",
+      "Our expert photographers and artistic directors create stunning visuals that capture the essence of your brand. Whether it's a professional photoshoot or artistic direction, we bring your vision to life.",
   },
   {
     icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/99c48287efe7ed1d312b81d697e9fa8201ea92e6a2a6786e80a3a6d89dabbb87?placeholderIfAbsent=true&apiKey=93385a543be74ee9937d50a97d245785",
@@ -32,7 +32,7 @@ const services: Service[] = [
     icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/4a87fd12bb561aed341d82b8c3e310e724d01e8359f7085228db25b2707cdaae?placeholderIfAbsent=true&apiKey=93385a543be74ee9937d50a97d245785",
     title: "Web Development",
     description:
-      "Welcome to TK Media Group, your premier partner in the digital world. At TK Media Group, we believe in the power of creativity and strategy to",
+      "We produce captivating videos for corporate and social media purposes. Our videography services cover the entire process, from conceptualization to post-production, delivering compelling content that tells your brand's story.",
   },
   {
     icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/dbb64ec49bcadb087524c02d739fef38b81f95f3a2cd286049ab70631c948590?placeholderIfAbsent=true&apiKey=93385a543be74ee9937d50a97d245785",

@@ -47,7 +47,7 @@ const ResultsSection: React.FC = () => {
   };
 
   return (
-    <section id="about-us" className="bg-white py-16" ref={sectionRef}>
+    <section id="about-us" className="bg-white" ref={sectionRef}>
       <div className="flex flex-col justify-center mt-32 w-full px-10 max-md:px-4 max-md:mt-10 max-md:max-w-full">
         {/* Flex container for heading and paragraph */}
         <motion.div
@@ -85,8 +85,8 @@ const ResultsSection: React.FC = () => {
           whileHover="hover"
         >
           <Link
-            href="testimonial"
-            onClick={(e) => handleScroll(e, "testimonial")}
+            href="#testimonials"
+            onClick={(e) => handleScroll(e, "testimonials")}
             className="gap-2.5 px-5 py-2.5 text-base font-bold text-white bg-cyan-500 rounded-full"
           >
             More Reviews
