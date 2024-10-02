@@ -26,7 +26,7 @@ const services: Service[] = [
     icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/99c48287efe7ed1d312b81d697e9fa8201ea92e6a2a6786e80a3a6d89dabbb87?placeholderIfAbsent=true&apiKey=93385a543be74ee9937d50a97d245785",
     title: "AI Development",
     description:
-      "Welcome to TK Media Group, your premier partner in the digital world. At TK Media Group, we believe in the power of creativity and strategy to",
+      "Unlock the power of AI with our custom solutions, including machine learning, natural language processing, and computer vision. We tailor our approach to enhance efficiency and drive innovation for your business.",
   },
   {
     icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/4a87fd12bb561aed341d82b8c3e310e724d01e8359f7085228db25b2707cdaae?placeholderIfAbsent=true&apiKey=93385a543be74ee9937d50a97d245785",
@@ -38,19 +38,19 @@ const services: Service[] = [
     icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/dbb64ec49bcadb087524c02d739fef38b81f95f3a2cd286049ab70631c948590?placeholderIfAbsent=true&apiKey=93385a543be74ee9937d50a97d245785",
     title: "Blockchain Development",
     description:
-      "Welcome to TK Media Group, your premier partner in the digital world. At TK Media Group, we believe in the power of creativity and strategy to",
+      "Transform your operations with secure and scalable blockchain solutions. Our team builds decentralized applications, smart contracts, and custom networks to enhance transparency and efficiency across various industries.",
   },
   {
     icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/dbb64ec49bcadb087524c02d739fef38b81f95f3a2cd286049ab70631c948590?placeholderIfAbsent=true&apiKey=93385a543be74ee9937d50a97d245785",
     title: "Application Development",
     description:
-      "Welcome to TK Media Group, your premier partner in the digital world. At TK Media Group, we believe in the power of creativity and strategy to",
+      "Elevate your business with tailored applications that deliver seamless user experiences. We create mobile and web solutions designed for scalability and security, helping you engage customers and streamline operations.",
   },
   {
     icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/606b78d5a9a16c1357371de76743cda30cf1030e138774f14ffc864e53635169?placeholderIfAbsent=true&apiKey=93385a543be74ee9937d50a97d245785",
     title: "Digital Marketing",
     description:
-      "Welcome to TK Media Group, your premier partner in the digital world. At TK Media Group, we believe in the power of creativity and strategy to",
+      "Boost your online presence with our data-driven digital marketing strategies. From SEO and PPC to social media and content marketing, we help increase visibility, engage audiences, and drive conversions.",
   },
 ];
 
