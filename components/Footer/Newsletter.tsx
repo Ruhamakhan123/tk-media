@@ -12,7 +12,7 @@ const Newsletter: React.FC = () => {
           id="emailInput"
           type="email"
           placeholder="Enter your email"
-          className="bg-transparent text-white placeholder-white w-full"
+          className=" text-white placeholder-white w-full border-none focus:outline-none bg-transparent"
           aria-label="Enter your email"
         />
         <button type="submit" aria-label="Subscribe to newsletter">

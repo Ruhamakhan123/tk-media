@@ -54,13 +54,14 @@ function Navbar({ className }: { className?: string }) {
         {/* Sheet component for the mobile menu */}
         <Sheet>
           <SheetTrigger>
-            <button
+            <div
               aria-label="Open menu"
               className="text-white text-2xl focus:outline-none md:hidden ml-auto"
             >
               <FiMenu /> {/* Hamburger menu icon */}
-            </button>
+            </div>
           </SheetTrigger>
+
           <SheetContent className="bg-black border-none text-white">
             <SheetHeader>
               <div className="flex items-center justify-between -ml-32 w-full">
