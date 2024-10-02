@@ -78,7 +78,7 @@ const TestimonialSection: React.FC = () => {
   return (
     <section
       id="testimonials"
-      className="flex overflow-hidden flex-col justify-center p-32 bg-white max-md:px-5 max-md:py-24"
+      className="flex overflow-hidden flex-col justify-center p-32 bg-white max-md:px-5 max-md:py-24 mt-24"
     >
       <div className="flex flex-col justify-center w-full max-md:max-w-full">
         <header className="flex flex-wrap gap-10 justify-between items-center w-full max-md:max-w-full">

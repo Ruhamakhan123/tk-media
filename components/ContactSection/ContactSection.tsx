@@ -7,7 +7,7 @@ const ContactSection: React.FC = () => {
   return (
     <section
       id="contact"
-      className="flex flex-col justify-center items-center p-16 mt-56 w-full bg-cyan-500 max-md:px-5 max-md:py-24 max-md:mt-2 "
+      className="flex flex-col justify-center items-center p-16 mt-16 w-full bg-cyan-500 max-md:px-5 max-md:py-24 max-md:mt-2  "
       style={{
         backgroundImage: `url(${backgroundSvg.src})`, // Ensure to use .src for StaticImageData
         backgroundSize: "cover",
