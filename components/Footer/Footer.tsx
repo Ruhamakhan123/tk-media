@@ -34,7 +34,7 @@ const Footer: React.FC<FooterProps> = ({ logoSrc, description }) => {
   ];
 
   return (
-    <footer className="flex flex-col justify-center items-center px-28 pt-14 pb-6 bg-black max-md:px-5 max-md:pt-12">
+    <footer className="flex flex-col justify-center items-center px-28 pt-14 pb-10 bg-black max-md:px-5 max-md:pt-12 -mt-[100px] md:-mt-0">
       <div className="flex flex-col w-full max-w-[1216px] max-md:max-w-full">
         <div className="flex flex-wrap gap-10 justify-between items-start w-full text-base text-white max-md:max-w-full">
           <div className="flex flex-col leading-6 min-w-[240px] w-[259px]">

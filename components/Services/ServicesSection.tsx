@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+import React, { useRef } from "react";
+import { motion, useInView } from "framer-motion"; // Import useInView
 import ServiceItem from "./ServiceItem";
 
 interface Service {
@@ -21,6 +23,12 @@ const services: Service[] = [
       "Welcome to TK Media Group, your premier partner in the digital world. At TK Media Group, we believe in the power of creativity and strategy to",
   },
   {
+    icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/99c48287efe7ed1d312b81d697e9fa8201ea92e6a2a6786e80a3a6d89dabbb87?placeholderIfAbsent=true&apiKey=93385a543be74ee9937d50a97d245785",
+    title: "AI Development",
+    description:
+      "Welcome to TK Media Group, your premier partner in the digital world. At TK Media Group, we believe in the power of creativity and strategy to",
+  },
+  {
     icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/4a87fd12bb561aed341d82b8c3e310e724d01e8359f7085228db25b2707cdaae?placeholderIfAbsent=true&apiKey=93385a543be74ee9937d50a97d245785",
     title: "Web Development",
     description:
@@ -33,8 +41,8 @@ const services: Service[] = [
       "Welcome to TK Media Group, your premier partner in the digital world. At TK Media Group, we believe in the power of creativity and strategy to",
   },
   {
-    icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/99c48287efe7ed1d312b81d697e9fa8201ea92e6a2a6786e80a3a6d89dabbb87?placeholderIfAbsent=true&apiKey=93385a543be74ee9937d50a97d245785",
-    title: "AI Development",
+    icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/dbb64ec49bcadb087524c02d739fef38b81f95f3a2cd286049ab70631c948590?placeholderIfAbsent=true&apiKey=93385a543be74ee9937d50a97d245785",
+    title: "Application Development",
     description:
       "Welcome to TK Media Group, your premier partner in the digital world. At TK Media Group, we believe in the power of creativity and strategy to",
   },
@@ -47,25 +55,77 @@ const services: Service[] = [
 ];
 
 const ServicesSection: React.FC = () => {
+  // Create a ref for the section to track when it comes into view
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { once: true });
+
+  // Define variants for animations
+  const fadeDownVariants = {
+    hidden: { opacity: 0, y: -50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8 },
+    },
+  };
+
+  const flipRightVariants = {
+    hidden: { opacity: 0, rotateY: 90 },
+    visible: {
+      opacity: 1,
+      rotateY: 0,
+      transition: { duration: 0.8 },
+    },
+  };
+
+  const staggerContainer = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2, // Delay between each service item animation
+      },
+    },
+  };
+
   return (
-    <section
+    <motion.section
       id="services"
-      className="flex flex-col justify-center p-32 max-md:px-5 max-md:py-24"
+      ref={sectionRef}
+      className="flex flex-col justify-center p-12 md:p-32 max-md:px-5 max-md:py-10"
+      initial="hidden"
+      animate={isInView ? "visible" : "hidden"} // Trigger animation on scroll
+      variants={fadeDownVariants} // Apply fade-down animation to the section
     >
-      <h2 className=" font-gilroy text-4xl font-bold leading-tight text-center text-black max-md:max-w-full">
-        We offer top notch services
-      </h2>
-      <div className="flex flex-col justify-center self-center mt-8 max-w-full w-[1096px]">
+      <motion.h2
+        className="font-gilroy text-4xl font-bold leading-tight text-center text-black max-md:max-w-full"
+        variants={fadeDownVariants} // Apply fade-down animation to the heading
+      >
+        We offer top-notch services
+      </motion.h2>
+
+      <motion.div
+        className="flex text-start flex-col justify-center self-center mt-8 max-w-full w-[1096px]"
+        variants={staggerContainer} // Apply staggered animation to the container
+        initial="hidden"
+        animate={isInView ? "visible" : "hidden"} // Trigger animation on scroll
+      >
         {services.map((service, index) => (
-          <ServiceItem
+          <motion.div
             key={index}
-            icon={service.icon}
-            title={service.title}
-            description={service.description}
-          />
+            variants={flipRightVariants} // Apply flip-right animation to each service
+            initial="hidden"
+            animate={isInView ? "visible" : "hidden"}
+          >
+            <ServiceItem
+              icon={service.icon}
+              title={service.title}
+              description={service.description}
+            />
+          </motion.div>
         ))}
-      </div>
-    </section>
+      </motion.div>
+    </motion.section>
   );
 };
 

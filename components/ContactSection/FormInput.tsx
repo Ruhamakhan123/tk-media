@@ -32,7 +32,7 @@ const FormInput: React.FC<FormInputProps> = ({
         value={value}
         onChange={onChange}
         required={required}
-        className="w-full bg-transparent"
+        className="w-full border-none focus:outline-none bg-transparent"
         aria-label={label}
       />
     </div>

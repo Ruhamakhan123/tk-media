@@ -16,11 +16,10 @@ const CarouselNavButton: React.FC<CarouselNavButtonProps> = ({
   return (
     <button
       onClick={onClick}
-      className={`absolute top-1/2 z-10 flex justify-center items-center rounded-full 
-        ${direction === "left" ? "left-4" : "right-4"} 
-        bg-neutral-800 w-12 h-12 
-        max-md:w-8 max-md:h-8`}
-      aria-label={`Navigate ${direction}`}
+      className={`absolute top-1/2 transform -translate-y-1/2 ${
+        direction === "left" ? "left-4" : "right-4"
+      } bg-gray-800 text-white p-2 rounded-full hover:bg-gray-600 transition-colors`}
+      aria-label={`${direction === "left" ? "Previous" : "Next"} Image`}
     >
       <img
         src={arrowIcon.src}

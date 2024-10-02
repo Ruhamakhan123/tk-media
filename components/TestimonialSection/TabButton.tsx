@@ -1,26 +1,26 @@
 import React from "react";
 
 interface TabButtonProps {
+  active: boolean;
+  onClick: () => void;
   children: React.ReactNode;
-  active?: boolean;
-  onClick?: () => void; // Add onClick prop
+  className?: string; // Add this line to support className prop
 }
 
 const TabButton: React.FC<TabButtonProps> = ({
-  children,
-  active = false,
+  active,
   onClick,
-}) => {
-  return (
-    <button
-      onClick={onClick} // Attach onClick handler
-      className={`gap-2.5 self-stretch pb-3 my-auto ${
-        active ? "text-cyan-500 border-b-2 border-cyan-500" : "text-black"
-      }`}
-    >
-      {children}
-    </button>
-  );
-};
+  children,
+  className,
+}) => (
+  <button
+    onClick={onClick}
+    className={`text-base font-semibold ${className} ${
+      active ? "text-cyan-500" : "text-black"
+    }`}
+  >
+    {children}
+  </button>
+);
 
 export default TabButton;

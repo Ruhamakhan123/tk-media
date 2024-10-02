@@ -17,7 +17,7 @@ const ServiceItem: React.FC<ServiceItemProps> = ({
   return (
     <div className="flex flex-col md:flex-row gap-10 justify-between items-center py-8 w-full border-b border-stone-300 max-md:max-w-full">
       <div className="flex flex-col md:flex-row justify-center self-stretch my-auto text-3xl font-bold leading-none text-center text-black whitespace-nowrap min-w-[240px] w-[464px] max-md:max-w-full">
-        <div className="flex gap-6 items-center w-full max-md:max-w-full">
+        <div className="flex text-start gap-6 items-center w-full max-md:max-w-full">
           <img
             loading="lazy"
             src={icon}

@@ -43,7 +43,7 @@ function Navbar({ className }: { className?: string }) {
 
   return (
     <div className={cn("fixed top-0 inset-x-0 z-50", className)}>
-      <nav className="flex flex-wrap justify-between items-center px-6 py-3 bg-black text-white rounded-full shadow-lg mx-auto max-w-screen-xl">
+      <nav className="flex  flex-wrap justify-between items-center px-6 py-3 bg-black text-white rounded-full shadow-lg mx-auto max-w-screen-xl">
         {/* Logo on the left */}
         <div className="flex-shrink-0">
           <Link href="/" className="logo">
@@ -61,7 +61,7 @@ function Navbar({ className }: { className?: string }) {
               <FiMenu /> {/* Hamburger menu icon */}
             </button>
           </SheetTrigger>
-          <SheetContent className="bg-black text-white">
+          <SheetContent className="bg-black border-none text-white">
             <SheetHeader>
               <div className="flex items-center justify-between -ml-32 w-full">
                 <SheetTitle>Navigation</SheetTitle>
@@ -72,7 +72,8 @@ function Navbar({ className }: { className?: string }) {
               </div>
             </SheetHeader>
 
-            <div className="flex flex-col items-start text-white text-sm md:text-md mt-4 md:mt-0">
+            <div className="flex flex-col space-y-3 items-start justify-start text-white text-sm md:text-md mt-4 md:mt-0">
+              {/* Each Link has consistent spacing using 'space-y-6' */}
               <Link
                 href="/"
                 onClick={(e) => handleScroll(e, "home")}
@@ -117,37 +118,36 @@ function Navbar({ className }: { className?: string }) {
                   )}
                 >
                   Services{" "}
-                  <span className="ml-1">
-                    <FaAngleDown />
-                  </span>
+                  {/* <span className="ml-1">
+                <FaAngleDown />
+              </span> */}
                 </Link>
               </div>
 
               {/* Search icon with input */}
-              <div className="relative w-full">
-                <div
-                  className="flex items-center hover:bg-gray-700 rounded-lg px-3 py-2 w-full text-left transition cursor-pointer"
-                  onClick={() => setSearchOpen(!searchOpen)}
-                >
-                  <FaSearch className="text-white" />
-                  <p className="ml-1">Search</p>
-                </div>
-                {searchOpen && (
+
+              <div className="relative w-full mb-5 h-7">
+                {/* Search Input Field with Icon */}
+                <div className="flex items-center">
+                  <FaSearch className="text-white mr-2" />
                   <input
                     type="text"
-                    placeholder="Search..."
-                    className="absolute top-full left-0 mt-2 w-full bg-white text-black rounded-lg px-2 py-1 border border-gray-300"
-                    onBlur={() => setSearchOpen(false)}
+                    placeholder="Search"
+                    className="bg-transparent text-white placeholder-white focus:outline-none w-full border-none"
                   />
-                )}
+                </div>
+
+                {/* Dotted Line Underneath the Input */}
+                <div className="absolute left-0 bottom-0 w-full "></div>
               </div>
 
               {/* Contact button */}
+
               <Link
                 href="#contact"
                 onClick={(e) => handleScroll(e, "contact")}
                 className={cn(
-                  "bg-[#00bbd2] text-white px-4 py-2 rounded-lg w-full text-left border-2 border-black hover:bg-teal-600 transition",
+                  "bg-[#00bbd2] w-full  text-white px-4 py-1 rounded-lg mt-10 text-left border-2 border-black hover:bg-teal-600 transition",
                   isActive("/contact") ? "bg-teal-600" : ""
                 )}
               >
@@ -199,26 +199,24 @@ function Navbar({ className }: { className?: string }) {
               )}
             >
               Services{" "}
-              <span className="ml-1">
-                <FaAngleDown />
-              </span>
             </Link>
           </div>
 
           {/* Search */}
-          <div className="relative">
-            <FaSearch
-              className="text-white cursor-pointer hover:bg-gray-700 rounded-full p-2"
-              onClick={() => setSearchOpen(!searchOpen)}
-            />
-            {searchOpen && (
+          <div className="relative w-32">
+            {/* Search Input Field with Icon */}
+            <div className="flex items-center">
+              <FaSearch className="text-white mr-2 flex-shrink-0" />{" "}
+              {/* Ensure icon doesn't shrink */}
               <input
                 type="text"
-                placeholder="Search..."
-                className="absolute top-full left-0 mt-2 w-full bg-white text-black rounded-lg px-2 py-1 border border-gray-300"
-                onBlur={() => setSearchOpen(false)}
+                placeholder="Search"
+                className="bg-transparent text-white placeholder-white focus:outline-none w-full border-none"
               />
-            )}
+            </div>
+
+            {/* Dotted Line Underneath the Input */}
+            <div className="absolute left-0 bottom-0 w-full "></div>
           </div>
 
           {/* Contact button */}

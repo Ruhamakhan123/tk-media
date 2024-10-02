@@ -37,7 +37,7 @@ const ContactForm: React.FC = () => {
         Drop us a message, we won't ignore it :)
       </h3>
 
-      <div className="flex flex-col justify-center mt-6 w-full max-md:max-w-full">
+      <div className="flex flex-col space-y-4 justify-center mt-6 w-full max-md:max-w-full">
         <div className="flex gap-4 justify-center items-center w-full max-md:flex-col max-md:gap-2">
           <FormInput
             label="Full Name"
@@ -55,27 +55,30 @@ const ContactForm: React.FC = () => {
             required
           />
         </div>
-
-        <div className="flex gap-4 justify-center mt-4 w-full max-md:flex-col max-md:gap-2">
+        <div className="flex gap-6 justify-center mt-4 w-full max-md:flex-col max-md:gap-2">
           <div className="flex flex-1 shrink justify-between items-center py-3 h-full border-b border-black basis-0 w-full">
-            <label
-              htmlFor="service"
-              className="flex-1 shrink self-stretch my-auto basis-0"
-            >
-              Service I need<span className="text-red-600">*</span>
-            </label>
             <select
               id="service"
               name="service"
               value={formData.service}
               onChange={handleChange}
               required
-              className="appearance-none bg-transparent"
+              className="appearance-none border-none focus:outline-none bg-transparent"
             >
-              <option value="">Select a service</option>
+              <option value="">
+                Service I need<span className="text-red-600">*</span>
+              </option>
+              <option value="Videography">Videography</option>
+              <option value="Photography">Photography</option>
+              <option value="AI Development">AI Development</option>
               <option value="web-development">Web Development</option>
-              <option value="design">Design</option>
-              <option value="marketing">Marketing</option>
+              <option value="Blockchain Development">
+                Blockchain Development
+              </option>
+              <option value="Application Development">
+                Application Development
+              </option>
+              <option value="Digital Marketing">Digital Marketing</option>
             </select>
           </div>
           <FormInput
@@ -87,8 +90,7 @@ const ContactForm: React.FC = () => {
             required
           />
         </div>
-
-        <div className="flex-1 shrink pt-3 pb-24 mt-4 w-full border-b border-black min-h-[131px] max-md:max-w-full">
+        <div className="flex-1 shrink pt-3 pb-0 mt-4 w-full max-md:max-w-full">
           <label htmlFor="message" className="sr-only">
             Message
           </label>
@@ -99,9 +101,11 @@ const ContactForm: React.FC = () => {
             required
             value={formData.message}
             onChange={handleChange}
-            className="w-full h-full bg-transparent resize-none"
+            className="w-full h-full border-none focus:outline-none bg-transparent resize-none p-2 border border-black min-h-[150px] mb-0" // Removed margin-bottom
           />
         </div>
+        <div className="w-full border-b border-black"></div>{" "}
+        {/* Directly attached to textarea */}
       </div>
 
       <button
